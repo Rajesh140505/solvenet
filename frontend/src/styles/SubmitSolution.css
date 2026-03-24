@@ -1,0 +1,144 @@
+.submit-solution-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.solution-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.code-input {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-height: 300px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.btn-run {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-run:hover {
+  opacity: 0.9;
+}
+
+.btn-run:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.test-results {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--bg-input);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.test-results h3 {
+  margin-bottom: 1rem;
+}
+
+.test-case {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.test-case.passed {
+  border-left: 4px solid #22c55e;
+}
+
+.test-case.failed {
+  border-left: 4px solid #ef4444;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.status.passed {
+  color: #22c55e;
+}
+
+.status.failed {
+  color: #ef4444;
+}
+
+.test-details {
+  font-size: 0.9rem;
+}
+
+.test-details code {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-input);
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.error-output {
+  color: #ef4444;
+  margin-top: 0.5rem;
+}
+
+.all-passed {
+  padding: 1rem;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid #22c55e;
+  border-radius: var(--radius);
+  color: #22c55e;
+  text-align: center;
+  margin-top: 1rem;
+}

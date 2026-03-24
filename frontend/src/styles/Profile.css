@@ -1,0 +1,116 @@
+.profile-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.profile-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary), #a855f7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.user-details h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.user-details p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-tabs .tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 1rem 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.profile-tabs .tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.problems-list,
+.solutions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.problem-item,
+.solution-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.difficulty {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
