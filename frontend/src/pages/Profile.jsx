@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { authAPI } from '../services/api';
 import '../styles/Profile.css';
 
 const Profile = () => {
   const { userId } = useParams();
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('solutions');
@@ -22,6 +23,13 @@ const Profile = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    window.dispatchEvent(new Event('auth-change'));
+    navigate('/');
   };
 
   const getBadgeClass = (badge) => {
@@ -46,6 +54,7 @@ const Profile = () => {
             <span className={`badge ${getBadgeClass(user.badge)}`}>{user.badge}</span>
           </div>
         </div>
+        <button className="profile-logout-btn" onClick={handleLogout}>Logout</button>
         <div className="profile-stats">
           <div className="stat"><span className="stat-value">{user.reputation}</span><span className="stat-label">Reputation</span></div>
           <div className="stat"><span className="stat-value">{user.totalSolved || 0}</span><span className="stat-label">Solved</span></div>

@@ -41,14 +41,6 @@ const Navbar = () => {
     navigate('/');
   };
 
-  const getBadgeClass = (badge) => {
-    switch (badge) {
-      case 'Expert': return 'badge-expert';
-      case 'Contributor': return 'badge-contributor';
-      default: return 'badge-beginner';
-    }
-  };
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -57,9 +49,9 @@ const Navbar = () => {
           <span className="logo-text">SolveNet</span>
         </Link>
 
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        {/* <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           <span className="hamburger"></span>
-        </button>
+        </button> */}
 
         <div className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <Link to="/problems" className="nav-link" onClick={() => setMenuOpen(false)}>
@@ -80,17 +72,9 @@ const Navbar = () => {
               <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>
                 Dashboard
               </Link>
-              <div className="user-menu">
-                <Link to={`/profile/${user?._id}`} className="user-info" onClick={() => setMenuOpen(false)}>
-                  <span className={`user-badge ${getBadgeClass(user?.badge)}`}>
-                    {user?.badge}
-                  </span>
-                  <span className="username">{user?.username}</span>
-                </Link>
-                <button className="logout-btn" onClick={handleLogout}>
-                  Logout
-                </button>
-              </div>
+              <Link to={`/profile/${user?._id}`} className="profile-icon" onClick={() => setMenuOpen(false)}>
+                {user?.username?.charAt(0).toUpperCase()}
+              </Link>
             </>
           ) : (
             <div className="auth-buttons">

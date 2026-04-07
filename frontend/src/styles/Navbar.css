@@ -91,6 +91,9 @@
 
 .btn-login {
   color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
 }
 
 .btn-register {
@@ -101,6 +104,25 @@
 }
 
 .btn-register:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.profile-icon:hover {
   background: var(--primary-dark);
   color: white;
 }

@@ -11,6 +11,23 @@
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+
+.profile-logout-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.profile-logout-btn:hover {
+  background: var(--bg-input);
+  color: var(--text-primary);
 }
 
 .profile-info {
